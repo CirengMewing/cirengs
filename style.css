@@ -551,7 +551,9 @@ footer {
   }
 
   .menu-section .menu-list .menu-item {
-    width: calc(100% / 2 - 30px);
+    width: 50%; /* Menyesuaikan agar tidak full */
+    max-width: 250px; /* Menentukan batas maksimum */
+    margin: 0 auto; /* Memastikan card tetap di tengah */
   }
 
   .menu-section .menu-list .menu-item .menu-image {
