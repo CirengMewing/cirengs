@@ -126,7 +126,6 @@ img {
 header.scrolled {
   background-color: var(--primary-color);
   box-shadow: 0 5px 5px oklch(5% 0 0 / 0.9);
-  /* box-shadow: 0 5px 5px rgba(0, 0, 0, 0.9); */
 }
 
 header.scrolled nav a,
@@ -498,9 +497,9 @@ footer {
     width: 50%;
     padding: 3rem 3%;
     background: var(--primary-color);
-    backdrop-filter: blur(20px);
-    box-shadow: 0 5px 10px oklch(0% 0 0 / 0.9);
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    /* backdrop-filter: blur(20px); */
+    box-shadow: 0 5px 5px oklch(5% 0 0 / 0.9);
+    /* transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; */
   }
 
   .navbar.active {
