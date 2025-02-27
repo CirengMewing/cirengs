@@ -28,6 +28,7 @@ window.onscroll = () => {
       document.querySelector('header nav a[href*="' + id + '"]').classList.add('active');
     }
   });
+  closeNavbar(); // Menutup navbar saat scroll
 };
 
 // Toggle class active untuk hamburger menu
@@ -39,11 +40,22 @@ menuIcon.classList.toggle('bx-x');
 navbar.classList.toggle('active');
 };
 
-// Klik di luar elemen
-// const hm = document.querySelector('#menu-icon');
+// Fungsi untuk menutup navbar
+function closeNavbar() {
+  navbar.classList.remove('active');
+  menuIcon.classList.remove('bx-x');
+}
 
-// document.addEventListener('click', function (e) {
-//   if (!hm.contains(e.target) && !navbar.contains(e.target)) {
-//     navbar.classList.remove('active');
-//   }
-// });
+// Tutup Navbar saat klik di luar
+document.addEventListener('click', function (e) {
+  if (!menuIcon.contains(e.target) && !navbar.contains(e.target)) {
+    closeNavbar();
+  }
+});
+
+// Tutup Navbar saat klik menu item
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    closeNavbar();
+  });
+});
